@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise</title>
+
+    <style>
+        body{
+            background-color: #000;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background-color: #fff;
+            padding: 20px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: aquamarine;
+            
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-color: cadetblue;
+            color: darkred;
+            
+        }
+        .exercise-group {
+            margin-bottom: 20px;
+            background-color: antiquewhite;
+        }
+        .exercise {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: rgb(204, 188, 115);
+        }
+        .exercise img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .exercise h3 {
+            margin: 0;
+            flex: 1;
+            color: brown;
+        }
+        .exercise p {
+            flex: 2;
+            margin: 0 10px;
+        }
+        /* Styling the back button and box */
+        .back-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border: 2px solid #000; /* Border around the button */
+          border-radius: 5px;
+          cursor: pointer;
+          background-color: #f1f1f1;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-button:hover {
+          background-color: #ddd; /* Change background color on hover */
+          transform: scale(1.1); /* Slightly scale up on hover */
+        }
+
+        .back-button i {
+          font-size: 18px;
+          color: #000; /* Color of the arrow */
+        }
+    </style>
+    <script>
+        // Function to go back to the previous page
+    function goBack() {
+        window.history.back(); // Goes to the previous page in the browser history
+    }
+    </script>
+</head>
+<body>
+    
+    <!-- Back Button with Arrow Icon -->
+    <div class="back-button" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> <!-- Font Awesome Left Arrow Icon -->
+    </div>
+    <h1>Muscle Group Exercises</h1>
+    
+    
+    <!-- Chest Exercises -->
+    <div class="container exercise-group" id="chest">
+        <h2>Chest Exercises</h2>
+        <div class="exercise">
+            <h3>Bench Press</h3>
+            <p>The bench press is a fundamental strength-training exercise that targets the pectoral muscles, triceps, and shoulders.</p>
+            <img src="https://media1.tenor.com/m/5hBCoDMynogAAAAC/workout-exercise.gif" alt="Bench Press">
+        </div>
+        <div class="exercise">
+            <h3>Push-Ups</h3>
+            <p>Push-ups are a bodyweight exercise that work the chest, triceps, and shoulders. They are great for building upper body strength.</p>
+            <img src="https://media1.tenor.com/m/gI-8qCUEko8AAAAC/pushup.gif" alt="Push-Ups">
+        </div>
+        <div class="exercise">
+            <h3>Incline Dumbbell Press</h3>
+            <p>The incline dumbbell press targets the upper part of the chest and helps in building a well-rounded chest.</p>
+            <img src="https://media1.tenor.com/m/9T1dx6LbbgwAAAAC/2inclne-dumbel-press.gif" alt="Incline Dumbbell Press">
+        </div>
+        <div class="exercise">
+            <h3>Cable Fly</h3>
+            <p>Cable flies focus on the inner part of the chest and are great for adding definition and size to the pectoral muscles.</p>
+            <img src="https://media1.tenor.com/m/p-__t8FMTtoAAAAC/cable-chest-fly.gif" alt="Cable Fly">
+        </div>
+        <div class="exercise">
+            <h3>Chest Dips</h3>
+            <p>Chest dips are an excellent compound exercise that targets the lower chest and triceps, promoting overall upper body strength.</p>
+            <img src="https://media1.tenor.com/m/oh8ByjWxsqcAAAAd/streetlifting-weighted-dips.gif" alt="Chest Dips">
+        </div>
+    </div>
+
+    <!-- Back Exercises -->
+    <div class="container exercise-group" id="back">
+        <h2>Back Exercises</h2>
+        <div class="exercise">
+            <h3>Pull-Ups</h3>
+            <p>Pull-ups are a challenging bodyweight exercise that primarily targets the lats, along with the biceps and upper back.</p>
+            <img src="https://media1.tenor.com/m/XbAOK_WoMooAAAAd/pull-up.gif" alt="Pull-Ups">
+        </div>
+        <div class="exercise">
+            <h3>Deadlifts</h3>
+            <p>Deadlifts are a full-body exercise that strengthens the back, glutes, hamstrings, and core.</p>
+            <img src="https://media1.tenor.com/m/ghSVdO5nMV8AAAAC/crossfit-workout.gif" alt="Deadlifts">
+        </div>
+        <div class="exercise">
+            <h3>Barbell Row</h3>
+            <p>The barbell row is a compound movement that targets the middle back, lats, and biceps.</p>
+            <img src="https://media1.tenor.com/m/0pWzjiDfY_UAAAAd/bodybuilding-ronnie-coleman.gif" alt="Barbell Row">
+        </div>
+        <div class="exercise">
+            <h3>Lat Pulldowns</h3>
+            <p>Lat pulldowns are a great exercise for building the width of the back and developing the lat muscles.</p>
+            <img src="https://media.tenor.com/qtzW-FmnBOQAAAAi/lat-pull-down-machine.gif" alt="Lat Pulldowns">
+        </div>
+        <div class="exercise">
+            <h3>Single-Arm Dumbbell Row</h3>
+            <p>The single-arm dumbbell row targets the lats, traps, and rhomboids, providing unilateral strength development.</p>
+            <img src="https://media1.tenor.com/m/i4XjzbukwPAAAAAd/dumbbell-rows-brandon-william.gif" alt="Single-Arm Dumbbell Row">
+        </div>
+    </div>
+
+    <!-- Biceps Exercises -->
+    <div class="container exercise-group" id="biceps">
+        <h2>Biceps Exercises</h2>
+        <div class="exercise">
+            <h3>Barbell Curl</h3>
+            <p>Barbell curls are a fundamental exercise for building bicep size and strength.</p>
+            <img src="https://media1.tenor.com/m/RL3CbJbPvhwAAAAC/standing-barbell-biceps-curl.gif" alt="Barbell Curl">
+        </div>
+        <div class="exercise">
+            <h3>Dumbbell Curl</h3>
+            <p>Dumbbell curls allow for a greater range of motion and can help correct muscle imbalances.</p>
+            <img src="https://media1.tenor.com/m/F1CJGzNkplUAAAAC/gym-female-muscle.gif" alt="Dumbbell Curl">
+        </div>
+        <div class="exercise">
+            <h3>Hammer Curl</h3>
+            <p>Hammer curls target the brachialis muscle, which can help increase overall arm size and strength.</p>
+            <img src="https://media1.tenor.com/m/XJZa937El1cAAAAC/7altarnate-hummer-curl.gif" alt="Hammer Curl">
+        </div>
+        <div class="exercise">
+            <h3>Concentration Curl</h3>
+            <p>Concentration curls isolate the biceps for maximum muscle contraction and development.</p>
+            <img src="https://media1.tenor.com/m/hDSlDAGeJcUAAAAC/biceps-workout.gif" alt="Concentration Curl">
+        </div>
+        <div class="exercise">
+            <h3>Cable Curl</h3>
+            <p>Cable curls provide constant tension on the biceps, which can lead to greater muscle growth.</p>
+            <img src="https://media1.tenor.com/m/UrfaechYHIwAAAAC/cable-behind-body-bicep-curl-cable-curl.gif" alt="Cable Curl">
+        </div>
+    </div>
+
+    <!-- Triceps Exercises -->
+    <div class="container exercise-group" id="triceps">
+        <h2>Triceps Exercises</h2>
+        <div class="exercise">
+            <h3>Tricep Dips</h3>
+            <p>Tricep dips are an effective bodyweight exercise that primarily targets the triceps and chest.</p>
+            <img src="https://media1.tenor.com/m/Pvlmd3Y97goAAAAC/dips-tricep.gif" alt="Tricep Dips">
+        </div>
+        <div class="exercise">
+            <h3>Overhead Tricep Extension</h3>
+            <p>The overhead tricep extension isolates the triceps for maximum contraction and growth.</p>
+            <img src="https://media1.tenor.com/m/GRMSvKqfksMAAAAC/triceps.gif" alt="Overhead Tricep Extension">
+        </div>
+        <div class="exercise">
+            <h3>Tricep Pushdown</h3>
+            <p>Tricep pushdowns are a cable exercise that target all three heads of the triceps.</p>
+            <img src="https://media1.tenor.com/m/g9wNMqmfJ2sAAAAC/pushdown-lat-triceps.gif" alt="Tricep Pushdown">
+        </div>
+        <div class="exercise">
+            <h3>Close-Grip Bench Press</h3>
+            <p>The close-grip bench press focuses on the triceps while also engaging the chest and shoulders.</p>
+            <img src="https://media1.tenor.com/m/TgbVYDE_Ea4AAAAC/dokuz-close-grip-barbell-press.gif" alt="Close-Grip Bench Press">
+        </div>
+        <div class="exercise">
+            <h3>Skull Crushers</h3>
+            <p>Skull crushers are a powerful tricep exercise that involve lowering a weight towards the forehead and extending the arms.</p>
+            <img src="https://media1.tenor.com/m/Frmm9Ox-clkAAAAC/skull-crushers.gif" alt="Skull Crushers">
+        </div>
+    </div>
+
+    <!-- Leg Exercises -->
+    <div class="container exercise-group" id="legs">
+        <h2>Leg Exercises</h2>
+        <div class="exercise">
+            <h3>Squats</h3>
+            <p>Squats are a foundational leg exercise that targets the quads, hamstrings, glutes, and core.</p>
+            <img src="https://media1.tenor.com/m/pdMmsiutWkcAAAAC/gym.gif" alt="Squats">
+        </div>
+        <div class="exercise">
+            <h3>Leg Press</h3>
+            <p>The leg press is a machine exercise that emphasizes the quads, hamstrings, and glutes.</p>
+            <img src="https://media1.tenor.com/m/e0qeS17dv7QAAAAC/legpress45-leg-press.gif" alt="Leg Press">
+        </div>
+        <div class="exercise">
+            <h3>Lunges</h3>
+            <p>Lunges are a unilateral exercise that target the quads, hamstrings, glutes, and improve balance.</p>
+            <img src="https://media1.tenor.com/m/sZ7VwZ6jrbcAAAAC/gym.gif" alt="Lunges">
+        </div>
+        <div class="exercise">
+            <h3>Leg Curl</h3>
+            <p>Leg curls isolate the hamstrings, promoting muscle growth and strength in the back of the legs.</p>
+            <img src="https://media1.tenor.com/m/fj_cZPprAyMAAAAC/gym.gif" alt="Leg Curl">
+        </div>
+        <div class="exercise">
+            <h3>Calf Raises</h3>
+            <p>Calf raises target the calf muscles, enhancing lower leg strength and endurance.</p>
+            <img src="https://media1.tenor.com/m/dE7yo5T973EAAAAC/calves-raise.gif" alt="Calf Raises">
+        </div>
+    </div>
+
+    <!-- Abs Exercises -->
+    <div class="container exercise-group" id="abs">
+        <h2>Abs Exercises</h2>
+        <div class="exercise">
+            <h3>Crunches</h3>
+            <p>Crunches are a classic abs exercise that focus on the upper abdominal muscles.</p>
+            <img src="https://media1.tenor.com/m/vFqz6XYPKPIAAAAC/abdominal-supra-abdominal.gif" alt="Crunches">
+        </div>
+        <div class="exercise">
+            <h3>Plank</h3>
+            <p>The plank is an isometric exercise that engages the entire core, including the abs, back, and shoulders.</p>
+            <img src="https://media1.tenor.com/m/5Y0MAbtCAC4AAAAC/hardworking-core.gif" alt="Plank">
+        </div>
+        <div class="exercise">
+            <h3>Russian Twists</h3>
+            <p>Russian twists target the obliques and help in building a strong and defined core.</p>
+            <img src="https://media1.tenor.com/m/OLwm7qK98FgAAAAd/russiantwist-core.gif" alt="Russian Twists">
+        </div>
+        <div class="exercise">
+            <h3>Leg Raises</h3>
+            <p>Leg raises are a lower abs exercise that also engage the hip flexors and improve core stability.</p>
+            <img src="https://media1.tenor.com/m/0TSBsUrq1JsAAAAd/leg-raise-abs.gif" alt="Leg Raises">
+        </div>
+        <div class="exercise">
+            <h3>Bicycle Crunches</h3>
+            <p>Bicycle crunches are a dynamic exercise that targets the entire abdominal region, including the obliques.</p>
+            <img src="https://media1.tenor.com/m/Jopm0JiwtdsAAAAC/egsersiz.gif" alt="Bicycle Crunches">
+        </div>
+    </div>
+</body>
+</html>

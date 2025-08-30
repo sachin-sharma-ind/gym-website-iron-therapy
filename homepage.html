@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(187, 157, 74, 0.5);
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 25vw;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex: 1;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+        
+
+
+        .slide {
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 50%;
+            object-fit: contain;
+        }
+
+        .active {
+            display: block;
+        }
+        /* Modal (Image View) Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 20;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            z-index: 25;
+        }
+
+        .modal.open {
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="me.jpg" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="diet.html">Diet</a></li>
+                <li><a href="exercise.html">Exercises</a></li>
+                <li><a href="training.html">Personal Training</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        
+    
+    
+        
+        <div class="slider">
+            <center><h1 style="color: red; margin-top: 10vh;">IRON THERAPY</h1></center>
+            <p style="width:100vw ; color: aqua;"> The gym is more than just a place filled with weights and machines; it's a sanctuary where determination, struggle, and triumph coexist. Each piece of equipment holds countless stories of personal battles—moments of doubt overcome by sheer willpower, and days when progress feels infinitesimal yet fuels the fire within. The clanging of weights becomes a symphony of perseverance, a reminder that growth often stems from discomfort. Amid the sweat and effort, there's a profound sense of camaraderie; unspoken encouragement flows between those who understand the journey. The gym mirrors life’s trials, teaching resilience and patience, celebrating small victories, and forging an unbreakable spirit. It's a testament to the incredible strength of the human will, where every drop of sweat is a badge of honor, and every sore muscle a symbol of progress.</p>
+            <center><h4 style="color:darkorange;"> NO PAIN NO GAIN SHUT UP AND TRAIN</h4></center>
+            <div class="slide">
+                <img src="hanumanji1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="arnold1.jpg" alt="Image 2">
+            </div>    
+            <div class="slide">
+                <img src="cbum1.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="ishaan thakur.jpg" alt="Image 4">
+            </div>
+            <div class="slide">
+                <img src="kevin1.jpg" alt="Image 5">
+            </div>
+            <div class="slide">
+                <img src="cbum2.jpg" alt="Image 6">
+            </div>
+            <div class="slide">
+                <img src="lee1.jpg" alt="Image 7">
+            </div>
+            <div class="slide">
+                <img src="markus1.jpg" alt="Image 8">
+            </div>
+            <div class="slide">
+                <img src="cbum3.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="ronnie kevin.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="kevin2.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="markus2.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="ronnie1.jpg" alt="Image 3">
+            </div>
+        </div>
+        
+    </div>
+    <!-- Modal for Enlarged Image -->
+    <div class="modal" id="imageModal">
+        <span class="back-arrow" id="backArrow">&#8592;</span>
+        <img id="modalImage" src="" alt="Image" />
+    </div>
+    <script>
+        // Modal and Image Logic
+        const logo = document.querySelector('.logo img');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const backArrow = document.getElementById('backArrow');
+
+        logo.addEventListener('click', () => {
+            // Open modal and display the logo image in the center
+            modalImage.src = logo.src;  // Set image source
+            modal.classList.add('open');
+        });
+
+        // Close the modal when the back arrow is clicked
+        backArrow.addEventListener('click', () => {
+            modal.classList.remove('open');
+        });
+
+        // Close the modal if clicked anywhere outside the image
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.remove('open');
+            }
+        });
+        
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+
+            slides[slideIndex - 1].classList.add("active");
+
+            setTimeout(showSlides, 2000); // Change image every 3 seconds
+        }
+
+    </script>
+    
+</body>
+</html>

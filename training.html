@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Personal Training</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        .container {
+            width: 90%;
+            
+            background-color: rgba(240, 173, 223, 0.63);
+            padding: 20px;
+            margin: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .whatsapp-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #77d89a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .whatsapp-button:hover {
+            background-color: #033b17;
+
+        }
+        .whatsapp-button img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .location{
+            background-color: red;
+            color: cornsilk;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            padding: 10px 20px ;
+            margin: 10px;
+            width: 100px;
+
+        }
+        .location img{
+            margin-right: 20px;
+        }
+        .location:hover{
+            background-color: maroon;
+        }
+        /* Styling the back button and box */
+        .back-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border: 2px solid #000; /* Border around the button */
+          border-radius: 5px;
+          cursor: pointer;
+          background-color: #f1f1f1;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-button:hover {
+          background-color: #ddd; /* Change background color on hover */
+          transform: scale(1.1); /* Slightly scale up on hover */
+        }
+
+        .back-button i {
+          font-size: 18px;
+          color: #000; /* Color of the arrow */
+        }
+        
+        
+    </style>
+    <script>
+        // Function to go back to the previous page
+    function goBack() {
+        window.history.back(); // Goes to the previous page in the browser history
+    }
+    </script>
+</head>
+<body>
+    <!-- Back Button with Arrow Icon -->
+    <div class="back-button" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i> <!-- Font Awesome Left Arrow Icon -->
+    </div>
+    <div class="container">
+        <h1>Join My Personal Training Group</h1>
+        <p>Welcome to my personal training page! Connect with me and other fitness enthusiasts in our exclusive WhatsApp group.
+            <p>Any type of query about fitness will be solved.</p>
+           <p>Well experinced and personalised exercise and diet plans.</p>
+            You can visit our gym - THE DURGA GYM 
+
+        </p>
+        <a href="https://chat.whatsapp.com/FIxS0lmDuq67EBM9E7Nqc1" class="whatsapp-button">
+            <img src="whatsapp.png" alt="WhatsApp" width="24" height="24">
+            Join WhatsApp Group
+        </a>
+        <a href="https://maps.app.goo.gl/x9i2fjar3K2zbhCG7" class="location">
+            <img src="location.png" alt="location" width="20" height="20">
+            location
+        </a>
+    </div>
+    
+    </div>
+</body>
+</html>

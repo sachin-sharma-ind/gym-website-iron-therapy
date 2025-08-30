@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>User Review Form</title>
+    <style>
+        html, body {
+        height: 100vh;
+        overflow: hidden;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+            
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #13e61d;
+            scale: 1.1;
+        }
+        .reviews-list {
+            margin-top: 30px;
+        }
+        .review {
+            background-color: #a56363;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .review p {
+            margin: 5px 0;
+        }
+        .review:hover {
+            scale: 1.2;
+        }
+        
+           /* Styling the back button and box */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000; /* Border around the button */
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ddd; /* Change background color on hover */
+            transform: scale(1.1); /* Slightly scale up on hover */
+        }
+
+        .back-button i {
+            font-size: 18px;
+            color: #000; /* Color of the arrow */
+        }
+        .trainers-section {
+        background-color: #111;
+        padding: 40px 20px;
+        color: #ffffff;
+        text-align: center;
+        flex: 1;
+        align-items: center;
+        height: 90vh; /* limit height to fit screen */
+        overflow-y: auto; /* enable vertical scroll only in this section */
+        }
+
+        .trainers-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #ffc107;
+        }
+
+        .trainer-cards {
+        display: flex;
+        flex-direction: row; /* cards side by side */
+        gap: 20px;
+        flex-wrap: nowrap;   /* don't wrap to next line */
+        overflow-x: auto;     /* allow sideways scroll if needed */
+        padding-bottom: 10px;
+        }
+
+        .trainer-card {
+            background-color: #1e1e1e;
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .trainer-card:hover {
+            transform: scale(1.05);
+        }
+
+        .trainer-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid #ffc107;
+        }
+
+        .trainer-card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #00ffea;
+        }
+
+        .trainer-card p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .trainer-card a {
+            color: #00acee;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .trainer-card a:hover {
+            text-decoration: underline;
+        }
+        .trainers-section {
+        width: 40%;
+        height: 100%;
+        overflow-y: auto;
+        }
+        .container {
+        width: 50%;
+        height: 100%;
+        overflow-y: auto;
+        }
+        .main-layout {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        height: calc(100vh - 60px); /* Full height minus back button/top margin */
+        overflow: auto;
+        ;
+        }
+    </style>
+</head>
+<body>
+<!-- Back Button with Arrow Icon -->
+<div class="back-button" onclick="goBack()">
+    <i class="fas fa-arrow-left"></i> <!-- Font Awesome Left Arrow Icon -->
+</div>
+
+<div class="main-layout">
+
+    <div class="trainers-section">
+        <h2>Meet Our Trainers</h2>
+        <div class="trainer-cards">
+            <div class="trainer-card">
+            <img src="apni.jpg" alt="Trainer 4">
+            <h3>SACHIN SHARMA</h3>
+            <p>2 years of experience in gym training & highly experienced in mentoring</p>
+            <a href="https://instagram.com/sachin_sharma_ind" target="_blank">IG@sachin_sharma_ind</a>
+            </div>
+            <div class="trainer-card">
+                <img src="gopi.png" alt="GAURAV SHARMA">
+                <h3>GAURAV SHARMA</h3>
+                <p>3 years of experience in running and fitness</p>
+                <a href="https://instagram.com/gaurav3798_" target="_blank">IG@gaurav3798_</a>
+            </div>
+            <div class="trainer-card">
+                <img src="sourav.png" alt="Trainer 2">
+                <h3>NARINDER SHARMA</h3>
+                <p>5 years of experience in running & flexibility</p>
+                <a href="https://instagram.com/sharma_boy_sourav" target="_blank">IG@sharma_boy_sourav</a>
+            </div>
+            <div class="trainer-card">
+                <img src="harsh.jpg" alt="Trainer 3">
+                <h3>VINEET SHARMA</h3>
+                <p>4 years of experience in muscle building</p>
+                <a href="https://instagram.com/sharmaveenu686" target="_blank">IG@sharmaveenu686</a>
+            </div>
+            
+            <div class="trainer-card">
+                <img src="hari1.png" alt="Trainer 5">
+                <h3>HARI SHARMA</h3>
+                <p>6 years of experience in running crossfit & mobility</p>
+                <a href="https://instagram.com/harisharma716" target="_blank">IG@harisharma716</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Leave a Review</h2>
+        <form id="reviewForm">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="review">Your Review:</label>
+                <textarea id="review" rows="4" placeholder="Write your review here..." required></textarea>
+            </div>
+            <button type="submit">Submit Review</button>
+            
+            <h2 class="REVIEW">Reviews</h2>
+        </form>
+
+        <div class="reviews-list" id="reviewsList">
+            <h2>Reviews</h2>
+            <!-- Reviews will appear here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    // Load existing reviews from localStorage when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        loadReviews();
+    });
+
+    // Function to load and display reviews from localStorage
+    function loadReviews() {
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        const reviewsList = document.getElementById('reviewsList');
+        reviewsList.innerHTML = '';
+        reviews.forEach(function (review) {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = `<p><strong>${review.name}</strong></p><p>${review.review}</p>`;
+            reviewsList.appendChild(reviewElement);
+        });
+    }
+
+    // Function to handle form submission
+    document.getElementById('reviewForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get the name and review from the form
+        const name = document.getElementById('name').value;
+        const review = document.getElementById('review').value;
+
+        if (name && review) {
+            // Get existing reviews from localStorage
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+            // Add the new review to the array
+            reviews.push({ name, review });
+
+            // Save the updated reviews to localStorage
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+
+            // Clear the form
+            document.getElementById('name').value = '';
+            document.getElementById('review').value = '';
+
+            // Reload the reviews
+            loadReviews();
+        }
+    });
+    // Function to go back to the previous page
+    function goBack() {
+        window.history.back(); // Goes to the previous page in the browser history
+    }
+</script>
+
+</body>
+</html>
